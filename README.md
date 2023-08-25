@@ -12,14 +12,15 @@ which will fetch the data using Reddit API and create a json file. Further I hav
    ```bash
    git clone https://github.com/your-username/ThreadsInsight.git
 
-2. Create a virtual environment (optional but recommended)
-3. Activate virtual environment
+2. Navigate to the project directory
+3. Create a virtual environment (optional but recommended)
+4. Activate virtual environment
 
-4. Install the dependencies:
+5. Install the dependencies:
 
    ```bash
    pip install -r requirements.txt
 
-5. Run the application:
+6. Run the application:
    ```bash
    python app.py
