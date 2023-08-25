@@ -1,4 +1,4 @@
-# Reddit Article Fetcher Web Application (ThreadsInsight)
+# Reddit Wrapper Web Application (ThreadsInsight)
 
 This webapp will fetch the 10 latest threads of a subbreddit r/learnpython and will display it on the webpage. I have used Python-Flask as backend 
 which will fetch the data using Reddit API and create a json file. Further I have used javascript that will convert the json into html visuals
