@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threads Insights</title>
+    <style>
+        body {
+            font-family: "San Francisco", Helvetica, Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+    
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        #articles {
+            max-width: 750px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #000000;
+        }
+    
+        .article {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+    
+        .article h2 {
+            margin: 0;
+            font-size: 22px;
+            color: #333;
+        }
+    
+        .article p {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #777;
+        }
+    
+        .article a {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #333639;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 12px;
+            transition: background-color 0.3s;
+        }
+    
+        .article a:hover {
+            background-color: #000000;
+        }
+    </style>    
+    
+</head>
+<body>
+    <h1>Threads Insight</h1>
+    <div id="articles"></div>
+
+    <script>
+        async function fetchArticles() {
+            const response = await fetch('/fetch_articles');
+            const data = await response.json();
+
+            const articlesDiv = document.getElementById('articles');
+            data.forEach(article => {
+                const articleDiv = document.createElement('div');
+                articleDiv.classList.add('article');
+                
+                articleDiv.innerHTML = `
+                    <h2>${article.title}</h2>
+                    <p>Author: ${article.author}</p>
+                    <p>Created: ${new Date(article.created_utc * 1000)}</p>
+                    <a href="${article.url}" target="_blank">Read More</a>
+                    <hr>
+                `;
+                articlesDiv.appendChild(articleDiv);
+            });
+        }
+
+        fetchArticles();
+    </script>
+</body>
+</html>
