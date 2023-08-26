@@ -1,7 +1,8 @@
 # Reddit Wrapper Web Application (ThreadsInsight)
 
 This webapp will fetch the 10 latest threads of a subbreddit r/learnpython and will display it on the webpage. I have used Python-Flask as backend 
-which will fetch the data using Reddit API and create a json file. Further I have used javascript that will convert the json into html visuals
+which will fetch the data using Reddit API and create a json file. Further I have used javascript that will convert the json into html visuals.
+I have used praw(Python Reddit API Wrapper) library to fetch the data from Reddit
 
 ## Link to the web app: https://threadsinsight.pythonanywhere.com/
 
