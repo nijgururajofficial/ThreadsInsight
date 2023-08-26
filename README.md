@@ -24,3 +24,5 @@ which will fetch the data using Reddit API and create a json file. Further I hav
 6. Run the application:
    ```bash
    python app.py
+
+7. Access the application by ctrl + click on the URL or copy it in your web browser
